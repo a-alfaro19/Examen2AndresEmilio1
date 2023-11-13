@@ -5,14 +5,9 @@ name: Python application
 
 on:
   push:
-    branches:
-      - main
-      - develop
-      - feature/Encuentra
+    branches: [ "main", "develop"]
   pull_request:
-    branches:
-      - main
-      - develop
+    branches: [ "main", "develop" ]
 
 permissions:
   contents: read
@@ -23,10 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout código
-      uses: actions/checkout@v3
-      with:
-        ref: ${{ github.event_name == 'pull_request' && github.event.action == 'opened' && github.event.pull_request.head.ref }}
+    - uses: actions/checkout@v3
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
