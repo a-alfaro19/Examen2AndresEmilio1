@@ -5,7 +5,7 @@ name: Python application
 
 on:
   push:
-    branches: [ "main", "develop" ]
+    branches: [ "main", "develop", "feature/Encuentra" ]
   pull_request:
     branches: [ "main", "develop" ]
 
@@ -41,3 +41,4 @@ jobs:
     - name: Execute Test
       run: |
         python -m unittest -v UnitTest.py
+
