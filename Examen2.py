@@ -32,7 +32,7 @@ class MiClase:
                 return True
         return False
     
-
+# New comment
 ################################################################################################
 #Ejemplo de ejecución
 # Crear un objeto de la clase MiClase
